@@ -88,8 +88,3 @@ var (
 
 func (t LocationUTC) GetLocation() *time.Location { return utc }
 func (t LocationJST) GetLocation() *time.Location { return jst }
-
-// Compilation error
-// jst := &Time[LocationJST]{}
-// utc := &Time[LocationUTC]{}
-// if jst == utc { }
