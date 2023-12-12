@@ -34,7 +34,7 @@ func FromTimestamppb[L Location](t *timestamppb.Timestamp) (Time[L], error) {
 	return Time[L]{time: t.AsTime().In(L{}.GetLocation())}, nil
 }
 
-func FromSpannerNullString[L Location](t spanner.NullTime) Time[L] {
+func FromSpannerNullTime[L Location](t spanner.NullTime) Time[L] {
 	return Time[L]{time: t.Time.In(L{}.GetLocation())}
 }
 
@@ -46,7 +46,7 @@ func (t *Time[L]) AsTimestamppb() *timestamppb.Timestamp {
 	return timestamppb.New(t.time)
 }
 
-func (t *Time[L]) AsSpannerNullString() spanner.NullTime {
+func (t *Time[L]) AsSpannerNullTime() spanner.NullTime {
 	return spanner.NullTime{
 		Time:  t.time,
 		Valid: !t.time.IsZero(),
