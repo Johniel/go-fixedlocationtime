@@ -9,6 +9,5 @@ t := JST{}
 jst := New[LocationJST]()
 utc := New[LocationUTC]()
 if jst == utc {  // Compilation error
-  // do something
 }
 ```
