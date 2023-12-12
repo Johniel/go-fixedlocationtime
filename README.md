@@ -1,5 +1,5 @@
 # go-fixedlocationtime
-This pckage provide yen another Time data type to check timezone in compilation time.
+This pckage provides yet another time.Time data type to check timezone in compilation time.
 
 ``` go
 t := JST{}
