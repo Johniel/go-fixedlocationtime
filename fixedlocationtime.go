@@ -53,28 +53,27 @@ func (t *Time[L]) AsSpannerNullTime() spanner.NullTime {
 	}
 }
 
-func (t Time[L]) ZoneBounds() (start, end time.Time) { return t.time.ZoneBounds() }
-func (t Time[L]) GobEncode() ([]byte, error)         { return t.time.GobEncode() }
-func (t Time[L]) Hour() int                          { return t.time.Hour() }
-func (t Time[L]) ISOWeek() (year, week int)          { return t.time.ISOWeek() }
-func (t Time[L]) IsDST() bool                        { return t.time.IsDST() }
-func (t Time[L]) IsZero() bool                       { return t.time.IsZero() }
-func (t Time[L]) Location() *time.Location           { return t.time.Location() }
-func (t Time[L]) MarshalBinary() ([]byte, error)     { return t.time.MarshalBinary() }
-func (t Time[L]) MarshalJSON() ([]byte, error)       { return t.time.MarshalJSON() }
-func (t Time[L]) MarshalText() ([]byte, error)       { return t.time.MarshalText() }
-func (t Time[L]) Minute() int                        { return t.time.Minute() }
-func (t Time[L]) Month() time.Month                  { return t.time.Month() }
-func (t Time[L]) Nanosecond() int                    { return t.time.Nanosecond() }
-func (t Time[L]) Second() int                        { return t.time.Second() }
-func (t Time[L]) Unix() int64                        { return t.time.Unix() }
-func (t Time[L]) UnixMicro() int64                   { return t.time.UnixMicro() }
-func (t Time[L]) UnixMilli() int64                   { return t.time.UnixMilli() }
-func (t Time[L]) UnixNano() int64                    { return t.time.UnixNano() }
-func (t Time[L]) Weekday() time.Weekday              { return t.time.Weekday() }
-func (t Time[L]) Year() int                          { return t.time.Year() }
-func (t Time[L]) YearDay() int                       { return t.time.YearDay() }
-func (t Time[L]) Zone() (name string, offset int)    { return t.time.Zone() }
+func (t Time[L]) GobEncode() ([]byte, error)      { return t.time.GobEncode() }
+func (t Time[L]) Hour() int                       { return t.time.Hour() }
+func (t Time[L]) ISOWeek() (year, week int)       { return t.time.ISOWeek() }
+func (t Time[L]) IsDST() bool                     { return t.time.IsDST() }
+func (t Time[L]) IsZero() bool                    { return t.time.IsZero() }
+func (t Time[L]) Location() *time.Location        { return t.time.Location() }
+func (t Time[L]) MarshalBinary() ([]byte, error)  { return t.time.MarshalBinary() }
+func (t Time[L]) MarshalJSON() ([]byte, error)    { return t.time.MarshalJSON() }
+func (t Time[L]) MarshalText() ([]byte, error)    { return t.time.MarshalText() }
+func (t Time[L]) Minute() int                     { return t.time.Minute() }
+func (t Time[L]) Month() time.Month               { return t.time.Month() }
+func (t Time[L]) Nanosecond() int                 { return t.time.Nanosecond() }
+func (t Time[L]) Second() int                     { return t.time.Second() }
+func (t Time[L]) Unix() int64                     { return t.time.Unix() }
+func (t Time[L]) UnixMicro() int64                { return t.time.UnixMicro() }
+func (t Time[L]) UnixMilli() int64                { return t.time.UnixMilli() }
+func (t Time[L]) UnixNano() int64                 { return t.time.UnixNano() }
+func (t Time[L]) Weekday() time.Weekday           { return t.time.Weekday() }
+func (t Time[L]) Year() int                       { return t.time.Year() }
+func (t Time[L]) YearDay() int                    { return t.time.YearDay() }
+func (t Time[L]) Zone() (name string, offset int) { return t.time.Zone() }
 
 type JST = Time[LocationJST]
 type UTC = Time[LocationUTC]
